@@ -1,10 +1,10 @@
 const express = require("express");
-const home = require("./home");
-const info = require("./info");
-const errorHandler = require("./errorHandler");
-const { default: logger } = require("./logger");
-const { default: parseResponse } = require("./bodyParser");
-const { default: cors } = require("./cors");
+const home = require("./modules/home/home");
+const info = require("./modules/info/info");
+const errorHandler = require("./modules/core/errorHandler");
+const { default: logger } = require("./modules/core/logger");
+const { default: parseResponse } = require("./modules/core/bodyParser");
+const { default: cors } = require("./modules/core/cors");
 
 
 
