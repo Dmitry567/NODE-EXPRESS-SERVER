@@ -6,12 +6,14 @@ const { default: logger } = require("./modules/core/logger");
 const { default: parseResponse } = require("./modules/core/bodyParser");
 const { default: cors } = require("./modules/core/cors");
 const { default: routes } = require("./modules/core/routes");
+const { default: dbConnect } = require("../src/modules/core/db");
 
 
 
 const app = express();
 const PORT = 5000;
 
+dbConnect();
 logger(app);
 parseResponse(app);
 cors(app);
