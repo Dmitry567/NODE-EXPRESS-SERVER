@@ -9,9 +9,18 @@ function userRegister(req, res) {
 
   });
 
-  newUser.save();
-
-  res.status(200).json("userRegister here");
+  newUser
+    .save()
+    .then(() => {
+      res.status(200).json("User Created");
+    })
+    .catch((error) => {
+      console.log(error);
+      res.status(200).json("User Not Created");
+    })
+    .finally(() => {
+      console.log("END");// IT IS NO NEED TO PUT CONSOLE LOG IN FINALLY AND USE FINALLY
+    });  
   
 }
 
