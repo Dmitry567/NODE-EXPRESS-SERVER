@@ -16,7 +16,7 @@ function userRegister(req, res) {
     })
     .catch((error) => {
       console.log(error);
-      res.status(200).json("User Not Created");
+      res.status(400).json("User Not Created");
     })
     .finally(() => {
       console.log("END");// IT IS NO NEED TO PUT CONSOLE LOG IN FINALLY AND USE FINALLY

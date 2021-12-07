@@ -4,8 +4,8 @@ const User = require("./Model");
 
 function userGetAll(req, res) {
   User.find()// We can use find() to find particular data Example: email{email: "hot@gmail.com"}
-    .limit(2)
-    .skip(1)
+    .limit()
+    .skip()
     .exec()
     .then((result) => {
       res.status(200).json(result);
