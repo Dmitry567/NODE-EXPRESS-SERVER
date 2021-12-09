@@ -13,7 +13,8 @@ const userSchema = new Schema({
     type: String,
     required: true,
     select: false,// WE USE THAT IF WE DO NOT WANT SEE PASSWORD IN OUR RESPONSE BODY
-  }
+  },
+  name: String,
 });
 
 userSchema.index({ email: 1}, { unique: true });
